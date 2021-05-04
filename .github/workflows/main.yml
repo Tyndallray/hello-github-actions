@@ -12,7 +12,7 @@ jobs:
 
       - uses: ./card-move
         with:
-          CARD_ID: "60447547"
-          TO_COLUMN_ID: "14164247"
+          CARD_ID: 60447547
+          TO_COLUMN_ID: 14164247
           POSITION: "top"
           REPOSITORY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
