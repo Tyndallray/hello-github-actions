@@ -1,0 +1,23 @@
+{
+  "name": "hello-github-actions",
+  "version": "1.0.0",
+  "description": "This course will walk you through writing your first action and using it with a workflow file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyndallray/hello-github-actions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tyndallray/hello-github-actions/issues"
+  },
+  "homepage": "https://github.com/Tyndallray/hello-github-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0"
+  }
+}
