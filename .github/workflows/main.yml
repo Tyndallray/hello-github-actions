@@ -9,3 +9,9 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
+
+      - uses: ./card-move
+        with:
+          FROM_COLUMN_ID: "Mona"
+          TO_COLUMN_ID: "Mona"
+          REPOSITORY_TOKEN: "Mona"

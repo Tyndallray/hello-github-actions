@@ -1,0 +1,22 @@
+name: "Move a card"
+description: "Move a card from source column to destination column"
+author: "deveshvasnani@gmail.com"
+
+inputs:
+  FROM_COLUMN_ID:
+    description: "From column"
+    required: true
+  TO_COLUMN_ID:
+    description: "To column"
+    required: true
+  REPOSITORY_TOKEN:
+    description: "Token to perform action"
+    required: true
+
+outputs:
+  message:
+    description: "Display the output message"
+
+runs:
+  using: "node12"
+  main: "index.js"
