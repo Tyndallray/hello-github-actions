@@ -3,19 +3,23 @@ description: "Move a card from source column to destination column"
 author: "deveshvasnani@gmail.com"
 
 inputs:
-  FROM_COLUMN_ID:
-    description: "From column"
+  CARD_ID:
+    description: "Card Id"
     required: true
+  POSITION:
+    description: "It can be ['top', 'bottom']"
+    required: true
+    default: "top"
   TO_COLUMN_ID:
     description: "To column"
-    required: true
+    required: false
   REPOSITORY_TOKEN:
     description: "Token to perform action"
     required: true
 
 outputs:
-  message:
-    description: "Display the output message"
+  response:
+    description: "rest.js response"
 
 runs:
   using: "node12"

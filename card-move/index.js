@@ -2,12 +2,21 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
+
   // `who-to-greet` input defined in action metadata file
-  const from = core.getInput('FROM_COLUMN_ID');
   const to = core.getInput('TO_COLUMN_ID');
   const token = core.getInput('REPOSITORY_TOKEN');
-  
-  core.setOutput('message', 'Success');
+  const cardId = core.getInput('CARD_ID');
+  console.log(cardId, to, token);
+
+  const octokit = github.getOctokit(token);
+  const result = await octokit.projects.moveCard({
+      card_id: cardId,
+      position: 'top',
+      column_id: to
+  });
+
+  core.setOutput('response', result);
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
