@@ -12,9 +12,9 @@ async function run() {
     
       const octokit = github.getOctokit(token);
       const result = await octokit.projects.moveCard({
-          card_id: cardId,
+          card_id: Number(cardId),
           position: 'top',
-          column_id: to
+          column_id: Number(to)
       });
     
       core.setOutput('response', result);
