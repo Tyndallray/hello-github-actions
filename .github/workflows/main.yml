@@ -10,7 +10,7 @@ jobs:
         with:
           MY_NAME: "Mona"
 
-      - uses: Tyndallray/hello-github-actions@main/card-move
+      - uses: Tyndallray/hello-github-actions/card-move@main
         with:
           CARD_ID: 60447547
           TO_COLUMN_ID: 14164247
